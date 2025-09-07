@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 module.exports.index=async (req,res)=>{
     
     let allListings= await Listing.find({});
-    res.render("./Listings/index.ejs",{allListings})
+    res.render("./listings/index.ejs",{allListings})
 };
 
 module.exports.searchByName=async(req,res)=>{
@@ -19,7 +19,7 @@ module.exports.searchByName=async(req,res)=>{
   res.redirect(`/Listings/${id}`);
 }
 module.exports.renderNewFrom=(req,res)=>{
-    res.render("./Listings/new.ejs");
+    res.render("./listings/new.ejs");
 };
 
 module.exports.showListing=async (req,res)=>{
@@ -29,7 +29,7 @@ module.exports.showListing=async (req,res)=>{
         req.flash("error","Listing you requested for does not exist!");
         return res.redirect("/Listings");
     }
-    res.render("./Listings/show.ejs",{listing});
+    res.render("./listings/show.ejs",{listing});
 };
 
 module.exports.createListing=async (req,res,next)=>{
