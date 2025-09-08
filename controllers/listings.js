@@ -34,19 +34,24 @@ module.exports.showListing=async (req,res)=>{
 
 module.exports.createListing=async (req,res,next)=>{
     let{location}=req.body.listing;
-     let link = `https://nominatim.openstreetmap.org/search?format=json&q=${location}`;
-//     const response = await fetch(link, {
-//   headers: {
-//     "User-Agent": "MyAirbnbClone/1.0 ,manjeetyadav2905@gmail.com", 
-//     "Accept": "application/json"
-//   }
-// });
-     // const data=await fetch(link);
-     // const data2=await data.json();
-    let data2=await axios.get(link);
-    console.log(data2);
-     let coordinateLat=data2[0].lat;
-     let coordinateLon=data2[0].lon;
+     // let link = `https://nominatim.openstreetmap.org/search?format=json&q=${location}`;
+    
+    const response = await axios.get("https://nominatim.openstreetmap.org/search", {
+      params: {
+        format: "json",
+        q: location, // automatically URL encoded
+      },
+      headers: {
+        "User-Agent": "MyAirbnbClone/1.0 manjeetyadav2905@gmail.com",
+        "Accept": "application/json",
+      },
+    });
+
+    const data = response.data;
+    
+    console.log(data);
+     let coordinateLat=data[0].lat;
+     let coordinateLon=data[0].lon;
 
     let url=req.file.path;
     let filename=req.file.filename;
