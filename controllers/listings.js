@@ -34,7 +34,6 @@ module.exports.showListing=async (req,res)=>{
 
 module.exports.createListing=async (req,res,next)=>{
     let{location}=req.body.listing;
-     // let link = `https://nominatim.openstreetmap.org/search?format=json&q=${location}`;
     
     const response = await axios.get("https://nominatim.openstreetmap.org/search", {
       params: {
@@ -48,8 +47,6 @@ module.exports.createListing=async (req,res,next)=>{
     });
 
     const data = response.data;
-    
-    console.log(data);
      let coordinateLat=data[0].lat;
      let coordinateLon=data[0].lon;
 
