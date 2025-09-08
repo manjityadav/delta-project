@@ -37,6 +37,7 @@ module.exports.createListing=async (req,res,next)=>{
      let link = `https://nominatim.openstreetmap.org/search?format=json&q=${location}`;
      const data=await fetch(link);
      const data2=await data.json();
+    console.log(data2);
      let coordinateLat=data2[0].lat;
      let coordinateLon=data2[0].lon;
 
