@@ -43,7 +43,7 @@ module.exports.createListing=async (req,res,next)=>{
 // });
      // const data=await fetch(link);
      // const data2=await data.json();
-    let data2=respose.axios.get(link);
+    let data2=await axios.get(link);
     console.log(data2);
      let coordinateLat=data2[0].lat;
      let coordinateLon=data2[0].lon;
