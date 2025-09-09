@@ -70,9 +70,9 @@ const sessionOptions={
 
 
 
-// app.get("/",(req,res)=>{
-//     res.send("hi");
-// });
+app.get("/",(req,res)=>{
+    res.redirect("/Listings");
+});
 
 
 
