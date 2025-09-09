@@ -18,9 +18,24 @@
       border-radius: 25px;
       padding:0.5rem 3rem 0.5rem 3rem;
     }
+    /* For Bootstrap or custom navbar collapse */
+.navbar-collapse {
+  background-color: white;   /* or #fff */
+  padding: 1rem;
+  border-radius: 8px;        /* optional */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional */
+}
+
+/* Make sure links look nice */
+.navbar-collapse a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
   </style>
  <div class="container-fluid">
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top"">
+<nav class="navbar navbar-collapse navbar-expand-md bg-body-light border-bottom sticky-top"">
  
     <a class="navbar-brand" href="/Listings"><i class="fa-regular fa-compass"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
