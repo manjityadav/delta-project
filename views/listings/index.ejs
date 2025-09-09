@@ -96,7 +96,7 @@
         <b><%= listing.title %></b>
         <br>
         &#8377;<%= listing.price.toLocaleString("en-IN")%> / night
-        <i class="taxInfo">&nbsp;&nbsp;+18%GST=&#8377;<%=listing.price+(listing.price*18/100).toLocaleString("en-IN")%></i>
+        <i class="taxInfo">&nbsp;&nbsp;+18%GST=&#8377;<%=(listing.price+(listing.price*18/100)).toLocaleString("en-IN")%></i>
     </p>
   </div>
 </div>
