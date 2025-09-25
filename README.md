@@ -5,18 +5,25 @@ The app demonstrates authentication, authorization, and map integration using Le
 
 
 🚀 Features
+
 🔑 User Authentication (Signup / Login / Logout)
+
 🛡 Authorization (only logged-in users can post)
+
 🗺 Post a Location with map integration (Leaflet.js)
+
 📂 View Listings by category (e.g., Rooms, Castles, etc.)
+
 ⚡ Runs on Node.js with Express backend and MongoDB database
+
 🛠 Tech Stack
 Frontend: HTML, CSS, EJS
 Backend: Node.js, Express.js
 Database: MongoDB + Mongoose
 Authentication: Passport.js / JWT (depending on your setup)
 Maps: Leaflet.js
-⚙ Installation & Setup
+
+1.⚙ Installation & Setup
 Clone the repository
 git clone https://github.com/manjityadav/delta-project.git
 cd location-posting-app
