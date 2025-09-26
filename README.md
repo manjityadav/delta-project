@@ -1,4 +1,4 @@
-Location Posting App 📍
+# Location Posting App 📍
 A MERN stack project that allows users to sign up, log in, and post locations on a map.
 The app demonstrates authentication, authorization, and map integration using Leaflet.
 (No booking functionality is included.)
@@ -16,11 +16,11 @@ The app demonstrates authentication, authorization, and map integration using Le
 
 ⚡ Runs on Node.js with Express backend and MongoDB database
 
-🛠 Tech Stack
+# 🛠 Tech Stack
 Frontend: HTML, CSS, EJS
 Backend: Node.js, Express.js
 Database: MongoDB + Mongoose
-Authentication: Passport.js / JWT (depending on your setup)
+Authentication: Passport.js 
 Maps: Leaflet.js
 
 1.⚙ Installation & Setup
